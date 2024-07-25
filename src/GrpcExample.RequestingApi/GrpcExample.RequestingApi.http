@@ -1,0 +1,10 @@
+@GrpcExample.RequestingApi_HostAddress = https://localhost:7003
+
+### GRPC Call
+GET {{GrpcExample.RequestingApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+### HTTP Call
+GET {{GrpcExample.RequestingApi_HostAddress}}/weatherforecast/http
+Accept: application/json
+

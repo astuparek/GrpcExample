@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcWeatherService";
+
+package grpcweatherservice;
+
+service WeatherService {
+  rpc GetWeatherForecast (WeatherRequest) returns (WeatherResponse);
+}
+
+message WeatherRequest {
+}
+
+message WeatherResponse {
+  repeated WeatherForecast forecasts = 1;
+}
+
+message WeatherForecast {
+  string date = 1;
+  int32 temperatureC = 2;
+  string summary = 3;
+  int32 temperatureF = 4;
+}
